@@ -1,0 +1,21 @@
+<section class="newsletter-section">
+  <div class="newsletter-wrapper">
+    <h3>SIGN UP TO GET EARLY ACCESS</h3>
+    <p>Enter your details below to sign up to our mailing list</p>
+    {% form 'customer' %}
+      {{ form.errors | default_errors }}
+      <input type="hidden" name="contact[tags]" value="newsletter">
+      <div class="newsletter-form">
+        <input type="email" name="contact[email]" class="newsletter-email" placeholder="Email address" required>
+        <button type="submit" class="newsletter-button">SIGN UP</button>
+      </div>
+    {% endform %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Newsletter",
+  "presets": [{ "name": "Newsletter" }]
+}
+{% endschema %}

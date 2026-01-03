@@ -1,0 +1,14 @@
+<div class="announcement-bar">
+  <div class="announcement-scroll">
+    {% for i in (1..8) %}
+      <span class="announcement-text">{{ 'sections.announcement_bar.text' | t }}</span>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Announcement Bar",
+  "presets": [{ "name": "Announcement Bar" }]
+}
+{% endschema %}

@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}" class="{{ settings.body_font | replace: ' ', '_' | downcase }}">
+  <head>
+    <title>{{ page_title }}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {{ content_for_header }} 
+    {{ 'theme.css' | asset_url | stylesheet_tag }}
+  </head>
+  <body>
+    {% sections 'announcement-bar' %}
+    {% sections 'header' %}  // Use main-navigation as header section
+
+    <main role="main">
+      {{ content_for_layout }}
+    </main>
+
+    {% sections 'footer' %}
+
+    {{ 'product-carousel.js' | asset_url | script_tag }}
+  </body>
+</html>

@@ -1,0 +1,38 @@
+{
+  "sections": {
+    "announcement": {
+      "type": "announcement-bar"
+    },
+    "hero": {
+      "type": "hero"
+    },
+    "navigation": {
+      "type": "main-navigation"
+    },
+    "carousel": {
+      "type": "product-carousel"
+    },
+    "categories": {
+      "type": "category-grid"
+    },
+    "feature": {
+      "type": "feature-banner"
+    },
+    "newsletter": {
+      "type": "newsletter"
+    },
+    "footer": {
+      "type": "footer"
+    }
+  },
+  "order": [
+    "announcement",
+    "hero",
+    "navigation",
+    "carousel",
+    "categories",
+    "feature",
+    "newsletter",
+    "footer"
+  ]
+}

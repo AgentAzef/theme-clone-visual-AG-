@@ -1,0 +1,19 @@
+{% assign media = product.featured_media %}
+{% if media %}
+  <img
+    data-srcset="
+      {% if media.width >= 300 %}{{ media | image_url: width: 300 }} 300w,{% endif %}
+      {% if media.width >= 600 %}{{ media | image_url: width: 600 }} 600w,{% endif %}
+      {% if media.width >= 900 %}{{ media | image_url: width: 900 }} 900w{% endif %}
+    "
+    data-src="{{ media | image_url: width: 600 }}"
+    srcset="{{ 'blank.png' | asset_url }} 1w"  
+    alt="{{ media.alt | default: product.title | escape }}"
+    loading="lazy"
+    width="100%"
+    height="auto"
+    style="aspect-ratio: {{ media.aspect_ratio }};"
+  >
+{% else %}
+  {{ 'product-apparel-1' | placeholder_svg_tag: 'placeholder-svg' }}
+{% endif %}

@@ -1,0 +1,76 @@
+<div class="hero-wrapper">
+  <img src="{{ section.settings.hero_image | image_url: width: 'master' }}" class="hero-image" alt="{{ section.settings.heading | escape }}">
+  <div class="hero-overlay"></div>
+  <div class="header-overlay">
+    <div class="logo-overlay">GROWN ALCHEMIST</div>
+    <div class="header-icons">
+      // Search, Cart, Menu buttons with your SVGs and onclicks
+      <button class="icon-overlay" onclick="toggleSearch()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <circle cx="11" cy="11" r="8"/>
+          <path d="m21 21-4.35-4.35"/>
+        </svg>
+      </button>
+      <button class="icon-overlay" onclick="toggleCart()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/>
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <path d="M16 10a4 4 0 0 1-8 0"/>
+        </svg>
+      </button>
+      <button class="icon-overlay" onclick="alert('Menu')">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+          <line x1="3" y1="6" x2="21" y2="6"/>
+          <line x1="3" y1="12" x2="21" y2="12"/>
+          <line x1="3" y1="18" x2="21" y2="18"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+  <div class="hero-content">
+    <h1>{{ section.settings.heading }}</h1>
+    <p>{{ section.settings.subtext }}</p>
+    <a href="{{ section.settings.button_link }}" class="hero-button">{{ section.settings.button_text }}</a>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Hero",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero Image"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "WINTER SALE"
+    },
+    {
+      "type": "text",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "30% Off Gift Sets. Limited Time Only."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "SHOP NOW"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero"
+    }
+  ]
+}
+{% endschema %}

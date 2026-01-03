@@ -1,0 +1,38 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Grown Alchemist",
+    "theme_author": "xAI Custom",
+    "theme_version": "1.0.0",
+    "theme_documentation_url": "https://example.com/docs",
+    "theme_support_url": "https://example.com/support"
+  },
+  {
+    "name": "colors",
+    "settings": [
+      {
+        "type": "color",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#fff"
+      },
+      {
+        "type": "color",
+        "id": "text_color",
+        "label": "Text Color",
+        "default": "#1a1a1a"
+      }
+    ]
+  },
+  {
+    "name": "typography",
+    "settings": [
+      {
+        "type": "font_picker",
+        "id": "body_font",
+        "label": "Body Font",
+        "default": "helvetica_n4"
+      }
+    ]
+  }
+]
